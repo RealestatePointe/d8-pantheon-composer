@@ -1,0 +1,59 @@
+name: RealestatePointe Standard
+type: profile
+description: 'Standard Start State for RealestatePointe Websites'
+core: 8.x
+
+dependencies:
+  # Core
+  - node
+  # - history
+  - block
+  - breakpoint
+  - ckeditor
+  - color
+  - config
+  # - comment
+  - contextual
+  - contact
+  - menu_link_content
+  - datetime
+  - block_content
+  - quickedit
+  - editor
+  - help
+  - image
+  - menu_ui
+  - options
+  - path
+  - page_cache
+  - dynamic_page_cache
+  # - big_pipe
+  - taxonomy
+  - dblog
+  # - search
+  # - shortcut
+  - toolbar
+  - field_ui
+  - file
+  - rdf
+  - views
+  - views_ui
+  # - tour
+  - automated_cron
+  # Contrib
+  - 'admin_toolbar'
+  - 'admin_toolbar_tools'
+  - 'adminimal_admin_toolbar'
+  - 'pathauto'
+  - 'redirect'
+  - 'webform'
+  - 'imce'
+  # Custom
+  - 'realestatepointe'
+
+themes:
+  # Core
+  - bartik
+  # - seven
+  # Contrib
+  - adminimal_theme

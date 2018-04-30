@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Unrestricted HTML'
+format: unrestricted_html
+weight: 1
+filters:
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
