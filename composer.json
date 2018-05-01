@@ -1,5 +1,5 @@
 {
-    "name": "tmanhollan/d8-pantheon-composer",
+    "name": "realestatepointe/d8-pantheon-composer",
     "description": "Install Drupal 8 with Composer on Pantheon.",
     "type": "project",
     "license": "MIT",
