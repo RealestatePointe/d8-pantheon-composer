@@ -36,3 +36,19 @@ if (file_exists($local_settings)) {
  * modifying settings.php.
  */
 $settings['install_profile'] = 'realestatepointe_standard';
+
+/**
+ * Avoid the trusted host settings warning
+ * See https://pantheon.io/docs/settings-php/#trusted-host-setting
+ * This is not being pre-configured for the live environment to avoid launching without the real hostname defined.
+ * The Pantheon Lando recipe closely emulates the true platform enviornment, and by default sets PANTHEON_ENVIRONMENT
+ * to "lando", so it needs to be excluded as well. I think all other cases would be valid: dev, test, and all multidev.
+ */
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  if (!in_array($_ENV['PANTHEON_ENVIRONMENT'], array('lando', 'live'))) {
+    $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.getpantheon.io";
+    $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.pantheon.io";
+    $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.pantheonsite.io";
+    $settings['trusted_host_patterns'][] = "{$_ENV['PANTHEON_ENVIRONMENT']}-{$_ENV['PANTHEON_SITE_NAME']}.panth.io";
+  }
+}
