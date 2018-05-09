@@ -48,6 +48,7 @@ dependencies:
   - 'redirect'
   - 'webform'
   - 'imce'
+  - metatag
   # Custom
   - 'realestatepointe'
 
