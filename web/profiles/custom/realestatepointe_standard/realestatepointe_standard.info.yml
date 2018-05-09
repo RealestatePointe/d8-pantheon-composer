@@ -49,6 +49,7 @@ dependencies:
   - 'webform'
   - 'imce'
   - metatag
+  - google_analytics
   # Custom
   - 'realestatepointe'
 

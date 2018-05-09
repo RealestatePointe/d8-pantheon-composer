@@ -25,6 +25,7 @@
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1",
         "drupal/core": "^8",
+        "drupal/google_analytics": "^2.2",
         "drupal/imce": "^1.6",
         "drupal/metatag": "^1.5",
         "drupal/pathauto": "^1.2",
