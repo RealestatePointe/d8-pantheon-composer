@@ -50,6 +50,8 @@ dependencies:
   - 'imce'
   - metatag
   - google_analytics
+  - captcha
+  - recaptcha
   # Custom
   - 'realestatepointe'
 
