@@ -25,6 +25,7 @@
         "drupal/config_installer": "^1.0",
         "drupal/console": "^1",
         "drupal/core": "^8",
+        "drupal/environment_indicator": "^3.3",
         "drupal/google_analytics": "^2.2",
         "drupal/imce": "^1.6",
         "drupal/metatag": "^1.5",
@@ -43,14 +44,15 @@
         "webflo/drupal-core-strict": "^8"
     },
     "require-dev": {
-        "mikey179/vfsstream": "^1.2",
         "behat/behat": "3.*",
         "behat/mink": "^1.7",
         "behat/mink-extension": "^2.2",
         "behat/mink-goutte-driver": "^1.2",
+        "drupal/devel": "^1.2",
+        "drupal/drupal-extension": "^3.1",
         "jcalderonzumba/gastonjs": "^1.0.2",
         "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
-        "drupal/drupal-extension": "^3.1",
+        "mikey179/vfsstream": "^1.2",
         "phpunit/phpunit": "^4.8",
         "symfony/css-selector": "^2.8"
     },
