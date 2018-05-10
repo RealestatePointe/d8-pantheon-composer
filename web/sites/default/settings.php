@@ -120,20 +120,23 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] != 'la
  *   the less reliable local MTA (postfix).
  */
 if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
-  if ($secrets_text = file_get_contents('sites/default/files/private/secrets.json')) {
-    $secrets_json = json_decode($secrets_text, TRUE);
-    if (isset($secrets_json['smtp'])) {
-      $secret_parts = parse_url($secrets_json['smtp']);
-      if (isset($secret_parts['host']) && isset($secret_parts['user']) && isset($secret_parts['pass'])) {
-        $config['smtp.settings']['smtp_on'] = TRUE;
-        $config['smtp.settings']['smtp_host'] = $secret_parts['host'];
-        $config['smtp.settings']['smtp_username'] = $secret_parts['user'];
-        $config['smtp.settings']['smtp_password'] = $secret_parts['pass'];
-        if (isset($secret_parts['port'])) {
-          $config['smtp.settings']['smtp_port'] = $secret_parts['port'];
-        }
-        if (isset($secret_parts['scheme']) && ($secret_parts['scheme'] == 'ssl' || $secret_parts['scheme'] == 'tls')) {
-          $config['smtp.settings']['smtp_protocol'] = $secret_parts['scheme'];
+  $secrets_file = 'sites/default/files/private/secrets.json';
+  if (file_exists($secrets_file)) {
+    if ($secrets_text = file_get_contents($secrets_file)) {
+      $secrets_json = json_decode($secrets_text, TRUE);
+      if (isset($secrets_json['smtp'])) {
+        $secret_parts = parse_url($secrets_json['smtp']);
+        if (isset($secret_parts['host']) && isset($secret_parts['user']) && isset($secret_parts['pass'])) {
+          $config['smtp.settings']['smtp_on'] = TRUE;
+          $config['smtp.settings']['smtp_host'] = $secret_parts['host'];
+          $config['smtp.settings']['smtp_username'] = $secret_parts['user'];
+          $config['smtp.settings']['smtp_password'] = $secret_parts['pass'];
+          if (isset($secret_parts['port'])) {
+            $config['smtp.settings']['smtp_port'] = $secret_parts['port'];
+          }
+          if (isset($secret_parts['scheme']) && ($secret_parts['scheme'] == 'ssl' || $secret_parts['scheme'] == 'tls')) {
+            $config['smtp.settings']['smtp_protocol'] = $secret_parts['scheme'];
+          }
         }
       }
     }
