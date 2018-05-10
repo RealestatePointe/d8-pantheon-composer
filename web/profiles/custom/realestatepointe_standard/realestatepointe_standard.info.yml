@@ -52,6 +52,7 @@ dependencies:
   - google_analytics
   - captcha
   - recaptcha
+  - smtp
   # Custom
   - 'realestatepointe'
 
