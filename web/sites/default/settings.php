@@ -70,7 +70,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] != 'la
 
   if ($_ENV['PANTHEON_ENVIRONMENT'] === 'live') {
     //$primary_domain = 'example.com';
-    //$redirect_code = 301
+    //$redirect_code = 301;
     // When launching with a real hostname, uncomment the previous two lines, set the hostname, and remove the following condition
     if (preg_match('/\.pantheonsite\.io$/', $_SERVER['HTTP_HOST'])) {
       $primary_domain = $_SERVER['HTTP_HOST'];
