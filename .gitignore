@@ -10,8 +10,12 @@
 /web/modules/custom/dist/
 /web/themes/contrib/
 /web/themes/custom/dist/
+/web/themes/**/build/
 /web/profiles/contrib/
 /web/private/scripts/quicksilver
+
+# Ignore front end build directories
+/node_modules/
 
 # Ignore scaffold files
 web/.csslintrc

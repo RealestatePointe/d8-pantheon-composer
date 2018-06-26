@@ -1,0 +1,15 @@
+{
+  "name": "realestatepointe--d8-pantheon-composer",
+  "private": true,
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "bootswatch": "^3.3.7",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": ""
+}
