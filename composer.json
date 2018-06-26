@@ -11,6 +11,10 @@
         {
             "type": "vcs",
             "url": "git@github.com:tmanhollan/realestatepointe.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@github.com:tmanhollan/repmaster.git"
         }
     ],
     "require": {
@@ -41,6 +45,7 @@
         "pantheon-systems/quicksilver-pushback": "~1",
         "rvtraveller/qs-composer-installer": "^1.1",
         "tmanhollan/realestatepointe": "dev-master",
+        "tmanhollan/repmaster": "dev-master",
         "webflo/drupal-core-strict": "^8"
     },
     "require-dev": {
@@ -94,10 +99,10 @@
         "installer-paths": {
             "web/core": ["type:drupal-core"],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "web/modules/custom/dist/{$name}": ["type:drupal-custom-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
+            "web/themes/custom/dist/{$name}": ["type:drupal-custom-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
         },
         "build-env": {
