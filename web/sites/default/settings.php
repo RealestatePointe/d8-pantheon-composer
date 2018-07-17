@@ -127,6 +127,7 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
       if (isset($secrets_json['smtp'])) {
         $secret_parts = parse_url($secrets_json['smtp']);
         if (isset($secret_parts['host']) && isset($secret_parts['user']) && isset($secret_parts['pass'])) {
+          $config['system.mail']['interface']['default'] = 'SMTPMailSystem';
           $config['smtp.settings']['smtp_on'] = TRUE;
           $config['smtp.settings']['smtp_host'] = $secret_parts['host'];
           $config['smtp.settings']['smtp_username'] = $secret_parts['user'];
