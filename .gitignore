@@ -12,6 +12,7 @@
 /web/themes/custom/dist/
 /web/themes/**/build/
 /web/profiles/contrib/
+/web/profiles/custom/dist/
 /web/private/scripts/quicksilver
 
 # Ignore front end build directories
