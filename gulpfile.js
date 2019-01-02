@@ -8,5 +8,5 @@ var gulp = require('gulp'),
  * provides a theme task encapsulating its two default steps, compiling
  * sass and copying bootstrap's js libraries.
  */
-// gulp.task('default', ['theme']);
+gulp.task('default', []);
 
