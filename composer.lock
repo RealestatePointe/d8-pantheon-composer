@@ -6144,12 +6144,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tmanhollan/realestatepointe_standard.git",
-                "reference": "aca39f5843e0055895f0f275d6a1cda7444e2ef2"
+                "reference": "41f66aca9d21529491ea5fa34d02c637b7615ad2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tmanhollan/realestatepointe_standard/zipball/aca39f5843e0055895f0f275d6a1cda7444e2ef2",
-                "reference": "aca39f5843e0055895f0f275d6a1cda7444e2ef2",
+                "url": "https://api.github.com/repos/tmanhollan/realestatepointe_standard/zipball/41f66aca9d21529491ea5fa34d02c637b7615ad2",
+                "reference": "41f66aca9d21529491ea5fa34d02c637b7615ad2",
                 "shasum": ""
             },
             "require": {
@@ -6162,6 +6162,7 @@
                 "drupal/pathauto": "^1.2",
                 "drupal/recaptcha": "^2.3",
                 "drupal/redirect": "^1.1",
+                "drupal/simple_block": "^1.0@beta",
                 "drupal/smtp": "^1.0@beta",
                 "drupal/webform": "^5.0",
                 "tmanhollan/realestatepointe": "dev-master"
@@ -6181,7 +6182,7 @@
                 "source": "https://github.com/tmanhollan/realestatepointe_standard/tree/master",
                 "issues": "https://github.com/tmanhollan/realestatepointe_standard/issues"
             },
-            "time": "2019-07-09T19:00:16+00:00"
+            "time": "2019-07-11T14:30:02+00:00"
         },
         {
             "name": "tmanhollan/repmaster",
