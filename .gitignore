@@ -67,6 +67,7 @@ web/sites/default/files
 web/sites/*/settings.local.php
 web/sites/*/services*.yml
 !web/sites/*/services.pantheon.*.yml
+!web/sites/*/services.yml
 
 # Local drush settings
 drush/drushrc.local.php
