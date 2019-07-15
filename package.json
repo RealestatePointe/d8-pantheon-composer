@@ -5,8 +5,14 @@
   "dependencies": {
     "bootstrap-sass": "^3.3.7",
     "bootswatch": "^3.3.7",
-    "gulp": "^3.9.1",
-    "gulp-sass": "^4.0.1"
+    "ckeditor-codemirror-plugin": "^1.17.3",
+    "gulp": "^4",
+    "gulp-resolve-url": "https://github.com/tmanhollan/gulp-resolve-url#relative-to-other",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "resolutions": {
+    "gulp-resolve-url": "github:tmanhollan/gulp-resolve-url"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

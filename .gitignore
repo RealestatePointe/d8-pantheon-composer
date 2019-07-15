@@ -7,6 +7,7 @@
 /drush/Commands/
 /vendor/
 /web/core/
+/web/libraries/
 /web/modules/contrib/
 /web/modules/custom/dist/
 /web/themes/contrib/
