@@ -108,6 +108,11 @@ jobs:
                 keys:
                     - composer-cache
 
+            - restore_cache:
+                name: Restore Yarn cache
+                keys:
+                    - site-yarn-v1-{{ checksum "yarn.lock" }}
+
             - run:
                 name: setup-environment-vars
                 command: /build-tools-ci/scripts/set-environment
@@ -121,8 +126,16 @@ jobs:
                 command: ./.ci/scripts/01-prepare
 
             - run:
+                name: "Yarn Install"
+                command: "yarn install --pure-lockfile"
+
+            - run:
                 name: build assets
                 command: composer -n build-assets
+
+            - run:
+                name: build front end
+                command: ./node_modules/gulp/bin/gulp.js
 
             - run:
                 name: prepare database for site-under test
