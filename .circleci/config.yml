@@ -19,7 +19,7 @@ defaults: &defaults
     # ADMIN_PASSWORD: The admin password to use when installing.
     # ADMIN_EMAIL:    The email address to give the admin when installing.
     #=========================================================================
-    TZ: "/usr/share/zoneinfo/America/Los_Angeles"
+    TZ: "/usr/share/zoneinfo/America/New_York"
 
     # The variables below usually do not need to be modified.
 
@@ -207,18 +207,21 @@ workflows:
         # Set up environment variables
         - configure_env_vars
         # Install dev dependencies and do simple tests (sniff, unit tests, etc.)
-        - unit
+        - unit:
+            requires:
+                - configure_env_vars
         # Build deploy and test on target platform
-        - functional
+        - functional:
+            requires:
+                - unit
         # Deploy before running visual test
         - visual_regression_test:
             requires:
-                - configure_env_vars
                 - functional
   scheduled_update_check:
     triggers:
        - schedule:
-           cron: "0 0 * * *"
+           cron: "0 13 * * 4"
            filters:
              branches:
                only:
