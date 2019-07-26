@@ -11,15 +11,6 @@ then
     exit 0;
 fi
 
-# Check if we are NOT on the master branch and this is a PR
-if [[ ${CI_BRANCH} != "master" && -z ${CI_PR_URL} ]];
-then
-  echo -e "\nVisual regression tests will only run if we are not on the master branch and making a pull request"
-  exit 0;
-fi
-
-echo -e "\nProcessing pull request #$PR_NUMBER"
-
 GIT_FILE_MODIFIED()
 {
     # Stash list of changed files
@@ -40,6 +31,13 @@ LAST_GIT_COMMIT_MESSAGE=$(git log -1 --pretty=%B)
 # Always run visual tests if "[vr]" is in the last commit message
 if [[ ${LAST_GIT_COMMIT_MESSAGE} != *"[vr]"* ]]
 then
+
+    # Check if we are NOT on the master branch and this is a PR
+    if [[ ${CI_BRANCH} != "master" && -z ${CI_PR_URL} ]];
+    then
+        echo -e "\nVisual regression tests will only run if we are not on the master branch and making a pull request"
+        exit 0;
+    fi
 
     # Skip visual tests if there hasn't been a modification to composer.lock
     if ! GIT_FILE_MODIFIED 'composer.lock'
