@@ -10,8 +10,8 @@ function isRelativeURL(url) {
   return !url.startsWith('http');
 }
 
-// Stash live URL, removing any trailing slash
-var liveURL = process.env.LIVE_SITE_URL.replace(/\/$/, "");
+// Stash reference URL, removing any trailing slash
+var refURL = process.env.DEV_SITE_URL.replace(/\/$/, "");
 
 // Stash multidev URL, removing any trailing slash
 var multidevURL = process.env.MULTIDEV_SITE_URL.replace(/\/$/, "");
@@ -31,12 +31,12 @@ var newScenarios = fileContents.scenarios.map(function (scenario) {
 
   // If the url of the reference scenario is empty
   if (scenario.referenceUrl.length == 0) {
-    // Set it to the live URL
-    scenario.referenceUrl = liveURL;
+    // Set it to the reference URL
+    scenario.referenceUrl = refURL;
     // If the url of the reference scenario is relative
   } else if (isRelativeURL(scenario.referenceUrl)) {
-    // Prepend the live URL
-    scenario.referenceUrl = liveURL + scenario.referenceUrl;
+    // Prepend the reference URL
+    scenario.referenceUrl = refURL + scenario.referenceUrl;
   }
 
   // Return the updated scenario
