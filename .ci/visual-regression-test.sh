@@ -4,6 +4,13 @@
 BUILD_DIR=$(pwd)
 GITHUB_API_URL="https://api.github.com/repos/$CI_PROJECT_USERNAME/$CI_PROJECT_REPONAME"
 
+# Don't bother if we can't get reference images
+if [[ ${CI_BRANCH} == "master" && ${TERMINUS_ENV} == 'dev' ]]
+then
+    echo -e "\nSkipping visual regression tests because the testing is not being done in its own environment, so there are no reference images to test against."
+    exit 0;
+fi
+
 # Check if we are NOT on the master branch and this is a PR
 if [[ ${CI_BRANCH} != "master" && -z ${CI_PR_URL} ]];
 then
