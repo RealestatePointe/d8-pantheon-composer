@@ -29,7 +29,7 @@ GIT_FILE_MODIFIED()
 LAST_GIT_COMMIT_MESSAGE=$(git log -1 --pretty=%B)
 
 # Always skip visual tests if "[skip vr]" is in the last commit message
-if [[ ${LAST_GIT_COMMIT_MESSAGE} == *"[skip vr]"* ]]
+if [[ ${LAST_GIT_COMMIT_MESSAGE} == *"[skip vr]"* || ${LAST_GIT_COMMIT_MESSAGE} == *"[skip tests]"* ]]
 then
     echo -e "\nSkipping visual regression test as requested"
     exit 0;

@@ -6,6 +6,16 @@ then
   exit 0;
 fi
 
+# Last commit should be the build assets, so skip that and get the previous
+LAST_GIT_COMMIT_MESSAGE=$(git log -1 --skip=1 --pretty=%B)
+
+# Always skip visual tests if "[skip vr]" is in the last commit message
+if [[ ${LAST_GIT_COMMIT_MESSAGE} == *"[skip tests]"* ]]
+then
+    echo -e "\nSkipping behat tests as requested"
+    exit 0;
+fi
+
 # Bail if required environment varaibles are missing
 if [ -z "$TERMINUS_SITE" ] || [ -z "$TERMINUS_ENV" ]
 then
