@@ -19,7 +19,21 @@ include __DIR__ . "/settings.pantheon.php";
 /**
  * Place the config directory outside of the Drupal root.
  */
-$settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config';
+$settings['config_sync_directory'] = dirname(DRUPAL_ROOT) . '/config/sync';
+
+/**
+ * Config split.
+ */
+if (
+  (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] != 'test' && $_ENV['PANTHEON_ENVIRONMENT'] != 'live')
+) {
+  $config['config_split.config_split.preproduction']['status'] = TRUE;
+}
+if (
+  isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] == 'test'
+) {
+  $config['config_split.config_split.test']['status'] = TRUE;
+}
 
 /**
  * If there is a local settings file, then include it
