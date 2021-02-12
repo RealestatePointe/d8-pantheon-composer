@@ -224,13 +224,13 @@ workflows:
         - visual_regression_test:
             requires:
                 - functional
-  scheduled_update_check:
-    triggers:
-       - schedule:
-           cron: "0 13 * * 4"
-           filters:
-             branches:
-               only:
-                 - master
-    jobs:
-      - composer_lock_updater
+  #scheduled_update_check:
+  #  triggers:
+  #     - schedule:
+  #         cron: "0 13 * * 4"
+  #         filters:
+  #           branches:
+  #             only:
+  #               - master
+  #  jobs:
+  #    - composer_lock_updater
