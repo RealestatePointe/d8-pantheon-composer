@@ -1,0 +1,6 @@
+enable: true
+description: true
+message: false
+mailkeys: ''
+address: devel@websites.realestatepointe.com
+whitelist: '*@realestatepointe.com'
