@@ -27,6 +27,9 @@
       "url": "",
       "referenceUrl": "",
       "hideSelectors": [],
+      "removeSelectors": [
+        ".view-content"
+      ],
       "selectors": [
         "document"
       ],
