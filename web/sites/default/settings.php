@@ -155,3 +155,13 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
     }
   }
 }
+
+/**
+ * Reroute email
+ *
+ * Set destination dynamically to add an address extension indicating the site
+ * and environment from which the email was redirected.
+ */
+if (isset($_ENV['PANTHEON_SITE_NAME']) && isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  $config['reroute_email.settings']['address'] = 'devel+' . $_ENV['PANTHEON_SITE_NAME'] . '-' . $_ENV['PANTHEON_ENVIRONMENT'] . '@websites.realestatepointe.com';
+}
