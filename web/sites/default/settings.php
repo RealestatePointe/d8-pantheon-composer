@@ -67,9 +67,9 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
 
 /**
  * Redirects
- * Default configuration redirects Pantheon platform domains to their HTTPS equivalents. 
+ * Default configuration redirects Pantheon platform domains to their HTTPS equivalents.
  * See https://pantheon.io/docs/domains/#platform-domains
- * To avoid applying unintended redirects to real hostnames at launch, redirects are only applied in the live 
+ * To avoid applying unintended redirects to real hostnames at launch, redirects are only applied in the live
  * environment to platform domains. And pre-launch platform domains default to 302 status code.
  * @todo: At launch, it's important to customize the live environment as follows:
  *  - Set $primary_domain to a real hostname and remove the platform domain condition
@@ -120,10 +120,45 @@ if (isset($_ENV['PANTHEON_ENVIRONMENT']) && $_ENV['PANTHEON_ENVIRONMENT'] != 'la
 }
 
 /**
+ * Environment indicator
+ * See https://pantheon.io/docs/environment-indicator/
+ * @todo: Add a git hook to set the version number e.g. drush sset environment_indicator.current_release 1.0.0-dev
+ */
+if (isset($_ENV['PANTHEON_ENVIRONMENT'])) {
+  $config['environment_indicator.indicator']['name'] = $_ENV['PANTHEON_ENVIRONMENT'];
+  // TODO: Create a quicksilver or git hook to set release info:
+  // drush sset environment_indicator.current_release $(git log --pretty=%h -n 1)
+  // TODO: Set up environment switcher with available environments
+  // see wp pantheon-hud plugin: https://github.com/pantheon-systems/pantheon-hud
+  switch ($_ENV['PANTHEON_ENVIRONMENT']) {
+    case 'live':
+      // Gray (standard toolbar color) for live
+      $config['environment_indicator.indicator']['bg_color'] = '#333333';
+      $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+      break;
+    case 'test':
+      // Green for Test
+      $config['environment_indicator.indicator']['bg_color'] = '#4C742C';
+      $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+      break;
+    case 'lando':
+      // Red for local dev
+      $config['environment_indicator.indicator']['bg_color'] = '#c50707';
+      $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+      break;
+    default:
+      // Orange for dev and multidev
+      $config['environment_indicator.indicator']['bg_color'] = '#d25e0f';
+      $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
+      break;
+  }
+}
+
+/**
  * Email credentials
  * See https://pantheon.io/docs/email/#outgoing-email
  * See https://pantheon.io/docs/private-paths/
- * Avoid storing smtp credentials in config. A complete URL (parsable by parse_url) should be stored 
+ * Avoid storing smtp credentials in config. A complete URL (parsable by parse_url) should be stored
  * in secrets.json with the key smtp. The url scheme should be smtp, ssl, or tls for the desired
  * smtp encryption protocol.
  *   e.g. terminus secrets:set smtp ssl://username:password@hostname:port
