@@ -20,6 +20,8 @@ defaults: &defaults
     # ADMIN_EMAIL:    The email address to give the admin when installing.
     #=========================================================================
     TZ: "/usr/share/zoneinfo/America/New_York"
+    GIT_EMAIL: automation@realestatepointe.com
+    GIT_NAME: "REP Automation"
 
     # The variables below usually do not need to be modified.
 
