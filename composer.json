@@ -9,6 +9,10 @@
             "url": "https://packages.drupal.org/8"
         },
         {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
             "type": "vcs",
             "url": "git@github.com:tmanhollan/realestatepointe.git"
         },
@@ -97,10 +101,19 @@
         ]
     },
     "extra": {
-        "installer-types": ["drupal-custom-profile"],
+        "installer-types": [
+            "drupal-custom-profile",
+            "bower-asset",
+            "npm-asset"
+        ],
         "installer-paths": {
             "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": ["type:drupal-library"],
+            "web/libraries/slick": ["bower-asset/slick-carousel"],
+            "web/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/modules/custom/dist/{$name}": ["type:drupal-custom-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
