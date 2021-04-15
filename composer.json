@@ -108,10 +108,12 @@
         "installer-types": [
             "drupal-custom-profile",
             "bower-asset",
+            "library",
             "npm-asset"
         ],
         "installer-paths": {
             "web/core": ["type:drupal-core"],
+            "web/libraries/dropzone": ["enyo/dropzone"],
             "web/libraries/slick": ["bower-asset/slick-carousel"],
             "web/libraries/{$name}": [
                 "type:drupal-library",
