@@ -22,6 +22,10 @@
         },
         {
             "type": "vcs",
+            "url": "git@github.com:tmanhollan/realestatepointe_media.git"
+        },
+        {
+            "type": "vcs",
             "url": "git@github.com:tmanhollan/realestatepointe_standard.git"
         },
         {
