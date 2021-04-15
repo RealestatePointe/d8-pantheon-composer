@@ -1,0 +1,30 @@
+purge_on_cache_clear: false
+storage: profiler.file_storage
+exclude: ''
+active_toolbar_items:
+  assets: assets
+  blocks: blocks
+  cache: cache
+  config: config
+  database: database
+  devel: devel
+  events: events
+  drupal_extension: drupal_extension
+  forms: forms
+  http: http
+  mail: mail
+  php_config: php_config
+  performance_timing: performance_timing
+  request: request
+  routing: routing
+  services: services
+  state: state
+  theme: theme
+  time: time
+  user: user
+  views: views
+ide_link: ''
+ide_link_remote: ''
+ide_link_local: ''
+query_sort: null
+query_highlight: null
