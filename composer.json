@@ -14,6 +14,10 @@
         },
         {
             "type": "vcs",
+            "url": "git@github.com:tmanhollan/pivot.git"
+        },
+        {
+            "type": "vcs",
             "url": "git@github.com:tmanhollan/realestatepointe.git"
         },
         {
@@ -49,8 +53,7 @@
         "oomphinc/composer-installers-extender": "^1.1",
         "pantheon-systems/drupal-integrations": "^8",
         "pantheon-systems/quicksilver-pushback": "^2",
-        "tmanhollan/realestatepointe_standard": "dev-master",
-        "tmanhollan/repmaster": "dev-master"
+        "tmanhollan/realestatepointe_standard": "dev-pivot"
     },
     "require-dev": {
         "behat/behat": "^3.1",
