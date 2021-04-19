@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eef0a99144527b949042104ca8429411",
+    "content-hash": "6c8d227d13e2a7f65949b9971b226f0a",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2262,17 +2262,17 @@
         },
         {
             "name": "drupal/blazy",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/blazy.git",
-                "reference": "8.x-2.1"
+                "reference": "8.x-2.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/blazy-8.x-2.1.zip",
-                "reference": "8.x-2.1",
-                "shasum": "bbdc3d9b5a49dca8e59373fd80739db84f8fa64a"
+                "url": "https://ftp.drupal.org/files/projects/blazy-8.x-2.2.zip",
+                "reference": "8.x-2.2",
+                "shasum": "ed2aed0ba8d51ef7ad4ad41c30c0185938d14d53"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2280,8 +2280,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.1",
-                    "datestamp": "1589120601",
+                    "version": "8.x-2.2",
+                    "datestamp": "1618669374",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2563,17 +2563,17 @@
         },
         {
             "name": "drupal/config_direct_save",
-            "version": "1.2.0",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/config_direct_save.git",
-                "reference": "8.x-1.2"
+                "reference": "8.x-2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/config_direct_save-8.x-1.2.zip",
-                "reference": "8.x-1.2",
-                "shasum": "6447e507e4050d2b90c216937eec2d2acd7d3a6b"
+                "url": "https://ftp.drupal.org/files/projects/config_direct_save-8.x-2.1.zip",
+                "reference": "8.x-2.1",
+                "shasum": "24a3668db87b1bf001b038614dc3865d2ec5e374"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -2581,8 +2581,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1591743069",
+                    "version": "8.x-2.1",
+                    "datestamp": "1618700636",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5522,17 +5522,17 @@
         },
         {
             "name": "drupal/slick",
-            "version": "2.2.0",
+            "version": "2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/slick.git",
-                "reference": "8.x-2.2"
+                "reference": "8.x-2.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/slick-8.x-2.2.zip",
-                "reference": "8.x-2.2",
-                "shasum": "789395b52697b6cee27648e478c4e579eee9540b"
+                "url": "https://ftp.drupal.org/files/projects/slick-8.x-2.3.zip",
+                "reference": "8.x-2.3",
+                "shasum": "5974f94c8b2d3e791e8ff9092b1bb566a27ad8f6"
             },
             "require": {
                 "drupal/blazy": "~2.0",
@@ -5541,8 +5541,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.2",
-                    "datestamp": "1588861104",
+                    "version": "8.x-2.3",
+                    "datestamp": "1618668938",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5636,17 +5636,17 @@
         },
         {
             "name": "drupal/slick_views",
-            "version": "2.3.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/slick_views.git",
-                "reference": "8.x-2.3"
+                "reference": "8.x-2.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/slick_views-8.x-2.3.zip",
-                "reference": "8.x-2.3",
-                "shasum": "974ece2c6a0f805c5cfc0e619f330cabf714633c"
+                "url": "https://ftp.drupal.org/files/projects/slick_views-8.x-2.4.zip",
+                "reference": "8.x-2.4",
+                "shasum": "297bbf60834f3f3331a45177c5e4aff52942195a"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -5655,8 +5655,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.3",
-                    "datestamp": "1589111335",
+                    "version": "8.x-2.4",
+                    "datestamp": "1618668307",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -10832,12 +10832,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tmanhollan/realestatepointe_standard.git",
-                "reference": "02faa759ff0432ce173de99e9b6e9c0a5ab9d52f"
+                "reference": "350578a650fce7c17185caddbfee6a1951027a20"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tmanhollan/realestatepointe_standard/zipball/02faa759ff0432ce173de99e9b6e9c0a5ab9d52f",
-                "reference": "02faa759ff0432ce173de99e9b6e9c0a5ab9d52f",
+                "url": "https://api.github.com/repos/tmanhollan/realestatepointe_standard/zipball/350578a650fce7c17185caddbfee6a1951027a20",
+                "reference": "350578a650fce7c17185caddbfee6a1951027a20",
                 "shasum": ""
             },
             "require": {
@@ -10854,7 +10854,7 @@
                 "drupal/bootstrap": "^3.23",
                 "drupal/ckeditor_codemirror": "^2.0",
                 "drupal/colorbox": "^1.6",
-                "drupal/config_direct_save": "^1.0",
+                "drupal/config_direct_save": "^2.1",
                 "drupal/config_split": "^1.6",
                 "drupal/crop": "^2.0",
                 "drupal/devel": "^4.0",
@@ -10912,7 +10912,7 @@
                 "source": "https://github.com/tmanhollan/realestatepointe_standard/tree/pivot",
                 "issues": "https://github.com/tmanhollan/realestatepointe_standard/issues"
             },
-            "time": "2021-04-16T22:56:24+00:00"
+            "time": "2021-04-19T14:17:13+00:00"
         },
         {
             "name": "twig/twig",
@@ -11877,11 +11877,11 @@
         },
         {
             "name": "drupal/coder",
-            "version": "8.3.12",
+            "version": "8.3.13",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/coder.git",
-                "reference": "719ddb16aec2e5da4ce274bf3bf8450caef564d4"
+                "reference": "d3286d571b19633cc296d438c36b9aed195de43c"
             },
             "require": {
                 "ext-mbstring": "*",
@@ -11891,7 +11891,7 @@
                 "symfony/yaml": ">=2.0.5"
             },
             "require-dev": {
-                "phpstan/phpstan": "^0.12.51",
+                "phpstan/phpstan": "^0.12.63",
                 "phpunit/phpunit": "^6.0 || ^7.0"
             },
             "type": "phpcodesniffer-standard",
@@ -11912,7 +11912,7 @@
                 "phpcs",
                 "standards"
             ],
-            "time": "2020-12-06T09:34:55+00:00"
+            "time": "2021-02-06T10:44:32+00:00"
         },
         {
             "name": "drupal/drupal-extension",
@@ -13779,16 +13779,16 @@
         },
         {
             "name": "textalk/websocket",
-            "version": "1.5.2",
+            "version": "1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Textalk/websocket-php.git",
-                "reference": "b93249453806a2dd46495de46d76fcbcb0d8dee8"
+                "reference": "25f6e322bfaf978a665391efdddc135d4edd60eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Textalk/websocket-php/zipball/b93249453806a2dd46495de46d76fcbcb0d8dee8",
-                "reference": "b93249453806a2dd46495de46d76fcbcb0d8dee8",
+                "url": "https://api.github.com/repos/Textalk/websocket-php/zipball/25f6e322bfaf978a665391efdddc135d4edd60eb",
+                "reference": "25f6e322bfaf978a665391efdddc135d4edd60eb",
                 "shasum": ""
             },
             "require": {
@@ -13820,7 +13820,7 @@
                 }
             ],
             "description": "WebSocket client and server",
-            "time": "2021-02-12T15:39:23+00:00"
+            "time": "2021-04-18T15:27:16+00:00"
         },
         {
             "name": "theseer/tokenizer",
